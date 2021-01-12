@@ -8,11 +8,12 @@
     <div class="w3-display-middle w3-center verse">
         <span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">
             <span>
-                Entonces tu luz despuntará como la aurora, y tu recuperación
+                {{verse.verse}}
+                {{!-- Entonces tu luz despuntará como la aurora, y tu recuperación
                 brotará con
-                rapidez; delante de ti irá tu justicia; y la gloria del Señor será tu retaguardia.
+                rapidez; delante de ti irá tu justicia; y la gloria del Señor será tu retaguardia. --}}
                 <br>
-                <span class="cite"> Isaías 58:8 LBLA</span>
+                <span class="cite"> {{verse.cite}}</span>
             </span></span>
     </div>
 </div>
@@ -21,10 +22,12 @@
 <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">ACERCA DE MI</h3>
     <p class="w3-center"><em>Me gusta crear soluciones</em></p>
-    <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    <p>Soy un joven soñador de {{ getOld }} años, que desde pequeño me gustaba mucho todo lo relacionado con la
+        computación.
+        Posiblemente la razón era porque uno de mis hermanos compró su primer computadora, y
+        yo jugaba: "Super Mario Bro" y "Metal Slug".
+        Juegos que actualmente me recuerdan que yo decia; "Cuando sea grande quiero ser Ingeniero en Sistem",
+        sin tener noción alguna de lo que trata esta carrera universitaria.
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
         cupidatat non proident, sunt in culpa
         qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
@@ -32,7 +35,7 @@
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <p><b><i class="fa fa-user w3-margin-right"></i>{{ nombre }}</b></p><br>
+            <p><b><i class="fa fa-user w3-margin-right"></i>{{ nombre }} {{ apellido }}</b></p><br>
             <img src="assets/img/avatar.jpg" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me"
                 width="500" height="333">
         </div>
@@ -160,36 +163,29 @@
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-    <h3 class="w3-center">WHERE I WORK</h3>
-    <p class="w3-center"><em>I'd love your feedback!</em></p>
+    <h3 class="w3-center">¿Dónde trabajo?</h3>
+    <p class="w3-center"><em>Me gustaria que me dieras fu feedback!</em></p>
 
     <div class="w3-row w3-padding-32 w3-section">
         <div class="w3-col m4 w3-container">
-            <img src="assets/img/img-home.jpg" class="w3-image w3-round" style="width:100%">
+            <img src="/assets/img/img-social.jpg" class="w3-image w3-round" style="width:100%">
         </div>
         <div class="w3-col m8 w3-panel">
             <div class="w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00
-                151515<br>
-                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
-                mail@mail.com<br>
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Guatemala, Ciudad
+                de Guatemala<br>
+                <br>
+                <strong>Redes Sociales</strong>
+                <br>
+                <i class="fab fa-facebook fa-fw  w3-hover-text-black w3-xlarge w3-margin-right"></i>Facebook: Marcos
+                Bonifasi<br>
+                <i class="fab fa-instagram fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Instagram:
+                @marcos.bonifasi<br>
+                <i class="fab fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Linkedin: Marcos
+                Daniel Bonifasi de León
+                <br>
             </div>
-            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-            <form action="/action_page.php" target="_blank">
-                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                    <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                    </div>
-                    <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                    </div>
-                </div>
-                <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                <button class="w3-button w3-black w3-right w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                </button>
-            </form>
+            <p>Dejame una nota</p>
         </div>
     </div>
 </div>

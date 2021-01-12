@@ -5,6 +5,7 @@ const app = express();
 const animejs = require("animejs");
 
 const hbs = require("hbs");
+require("./hbs/helpers");
 
 // Setting port
 const port = process.env.PORT || 3000;
@@ -20,6 +21,14 @@ app.get("/", (req, res) => {
         nombre: "Marcos",
         apellido: "Bonifasi",
         anio: new Date().getFullYear(),
+        ciudad: " Guatemala, Ciudad de Guatemala",
+        verse: {
+            verse: "Entonces tu luz despuntará como la aurora, y tu recuperación brotará con rapidez; delante de ti irá tu justicia; y la gloria del Señor será tu retaguardia.",
+            cite: "Isaías 58:8 LBLA",
+        },
+        facebook: "Marcos Bonifasi",
+        instagram: "@marcos.bonifasi",
+        linkedin: "Marcos Daniel Bonifasi de León ",
     });
 });
 
